@@ -1,0 +1,19 @@
+.products-list{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product-item {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  border: 1px solid gray;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 5px;
+  width: 30vw;
+  .name, .stock {
+    display: flex;
+  }
+}

@@ -18,9 +18,8 @@ export default createStore({
   },
   actions: {
     getProducts({ commit }) {
-      return axios.get(getProductsUrl()).then((products) => {
-        console.log("res: ", products)
-        commit("setProducts", products)
+      return axios.get(getProductsUrl()).then(({ data }) => {
+        commit("setProducts", data)
       })
     },
   },
