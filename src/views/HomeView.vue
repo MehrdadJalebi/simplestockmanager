@@ -1,18 +1,30 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <products-list :products="products" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import { mapActions, mapGetters } from "vuex"
+import ProductsList from "@/components/ProductsList.vue"
 
 export default {
   name: "HomeView",
   components: {
-    HelloWorld,
+    ProductsList,
   },
-};
+  computed: {
+    ...mapGetters({
+      products: "products",
+    }),
+  },
+  created() {
+    this.getProducts()
+  },
+  methods: {
+    ...mapActions({
+      getProducts: "getProducts",
+    }),
+  },
+}
 </script>
