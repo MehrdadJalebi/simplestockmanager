@@ -13,7 +13,8 @@
   margin: 0.5rem;
   border-radius: 5px;
   width: 30vw;
-  .name, .stock {
+  .name, .stock, .amount {
     display: flex;
+    align-items: center;
   }
 }

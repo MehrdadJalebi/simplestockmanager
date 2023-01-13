@@ -1,5 +1,6 @@
-@import 'variables';
-@import 'product';
+@import "variables";
+@import "product";
+@import "modal";
 
 body {
   margin: 0;
@@ -15,4 +16,37 @@ body {
 
 header {
   font-size: 1.5rem;
+}
+
+button {
+  padding: 0.25rem !important;
+  margin: 0.25rem 0.5rem !important;
+  border: 1px solid gray;
+  border-radius: 5px;
+  min-width: 20%;
+}
+
+input[type="text"]{
+    border: 2px solid gray;
+    height: 2.15em;
+    background-size: 1.5em;
+    border-radius: 0.4em;
+    padding: 0 1em;
+}
+
+.success {
+  background-color: $success;
+  color: $light; 
+}
+
+.secondary {
+  background-color: $secondary;
+  color: $light; 
+}
+
+.primary-outline {
+  border-color: $primary;
+}
+.secondary-outline {
+  border-color: $secondary;
 }
